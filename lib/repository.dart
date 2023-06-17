@@ -1,0 +1,1 @@
+import 'package:tasksobes/db_service.dart';class LocalStorage{  Repository repository = Repository();  List<Map> read() {  return repository.getAll() ?? [];  }}
