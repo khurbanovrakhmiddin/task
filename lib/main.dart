@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:tasksobes/bloc/home_bloc.dart';
-import 'package:tasksobes/home_page.dart';
+import 'package:tasksobes/page/main_page.dart';
 import 'package:tasksobes/page/HomePage.dart';
 
 import 'db_service.dart';
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: BlocProvider(create: (BuildContext context)=>HomeBloc(),child:const Home(),),
+      home: BlocProvider(create: (BuildContext context)=>HomeBloc()..add(InitEvent()),child:const Home(),),
     );
   }
 }

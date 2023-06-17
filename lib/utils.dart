@@ -1,0 +1,1 @@
+class Utils {  static String getText(int index){   return index == 1?"Hello Wordl":"Bye World";  }}

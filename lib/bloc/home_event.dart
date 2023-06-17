@@ -1,1 +1,1 @@
-part of 'home_bloc.dart';abstract class HomeEvent extends Equatable {  const HomeEvent();  @override  List<Object?> get props => [];}class InitEvent extends HomeEvent{}
+part of 'home_bloc.dart';abstract class HomeEvent extends Equatable {  const HomeEvent();  @override  List<Object?> get props => [];}class InitEvent extends HomeEvent{}class HomeChange extends HomeEvent{  final HomeStatus status;  final String time ; const HomeChange(this.status,this.time);}
